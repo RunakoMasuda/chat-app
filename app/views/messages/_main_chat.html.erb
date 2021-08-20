@@ -12,7 +12,10 @@
 
 
 <div class = "main_middle">
-  <div class = "message_group">
+  <%= render partial: 'message', collection: @messages %>
+</div>
+
+<%# <div class = "message_group">
     <div class = "upper-message">
       <div class = "user_name">Tom
       </div>
@@ -36,8 +39,7 @@
       <div class = "message">こんばんわ
       </div>
     </div>
-  </div>
-</div>
+  </div> %>
 
 <%= form_with model: [@room, @message], class: 'main_bottom', local: true do |f| %>
   <div class="send-form">
